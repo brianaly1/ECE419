@@ -1,0 +1,14 @@
+syntax = "proto3";
+package shared.messages;
+
+option java_package = "shared.messages";
+option java_outer_classname = "ProtobufMessage";
+
+message ProtobufKVMessage {
+
+  int32 status_type = 1;
+  string key = 2;
+  string value = 3;
+
+}
+

@@ -1,0 +1,122 @@
+2019-04-06 18:24:45,878 WARN  [main] root: zkAddress is:127.0.0.1:4321
+2019-04-06 18:24:45,880 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.11--1, built on 02/20/2019 14:37 GMT
+2019-04-06 18:24:45,880 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:host.name=brianaly-blade
+2019-04-06 18:24:45,880 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.version=1.8.0_201
+2019-04-06 18:24:45,880 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.vendor=Oracle Corporation
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.home=/usr/lib/jvm/java-8-oracle/jre
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.class.path=m2-ecs.jar
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.library.path=/usr/local/cuda-9.0/lib64::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:os.name=Linux
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:os.arch=amd64
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:os.version=4.15.0-46-generic
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:user.name=brianaly
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:user.home=/home/brianaly
+2019-04-06 18:24:45,881 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:user.dir=/home/brianaly/ECE419/M4
+2019-04-06 18:24:45,908 INFO  [main] org.apache.zookeeper.ZooKeeper: Initiating client connection, connectString=127.0.0.1:4321 sessionTimeout=2000 watcher=app_kvECS.ECSClient$$Lambda$1/20671747@3ecf72fd
+2019-04-06 18:24:45,914 INFO  [main-SendThread(127.0.0.1:4321)] org.apache.zookeeper.ClientCnxn: Opening socket connection to server 127.0.0.1/127.0.0.1:4321. Will not attempt to authenticate using SASL (unknown error)
+2019-04-06 18:24:45,916 INFO  [main-SendThread(127.0.0.1:4321)] org.apache.zookeeper.ClientCnxn: Socket connection established to 127.0.0.1/127.0.0.1:4321, initiating session
+2019-04-06 18:24:45,916 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:4321] org.apache.zookeeper.server.NIOServerCnxnFactory: Accepted socket connection from /127.0.0.1:33478
+2019-04-06 18:24:45,918 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:4321] org.apache.zookeeper.server.ZooKeeperServer: Client attempting to establish new session at /127.0.0.1:33478
+2019-04-06 18:24:45,918 INFO  [SyncThread:0] org.apache.zookeeper.server.persistence.FileTxnLog: Creating new log file: log.25
+2019-04-06 18:24:45,924 INFO  [SyncThread:0] org.apache.zookeeper.server.ZooKeeperServer: Established session 0x10000472c620000 with negotiated timeout 4000 for client /127.0.0.1:33478
+2019-04-06 18:24:45,924 INFO  [main-SendThread(127.0.0.1:4321)] org.apache.zookeeper.ClientCnxn: Session establishment complete on server 127.0.0.1/127.0.0.1:4321, sessionid = 0x10000472c620000, negotiated timeout = 4000
+2019-04-06 18:24:45,930 INFO  [main] root: ECS started with ZooKeeper 127.0.0.1:4321
+2019-04-06 18:24:51,402 INFO  [SessionTracker] org.apache.zookeeper.server.ZooKeeperServer: Expiring session 0x100021809600000, timeout of 4000ms exceeded
+2019-04-06 18:24:51,402 INFO  [ProcessThread(sid:0 cport:4321):] org.apache.zookeeper.server.PrepRequestProcessor: Processed session termination for sessionid: 0x100021809600000
+2019-04-06 18:24:54,840 ERROR [main] root: Could not connect to server
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at ecs.ECSNode.connectToServer(ECSNode.java:78)
+	at app_kvECS.ECSClient.setupNodes(ECSClient.java:311)
+	at app_kvECS.ECSClient.addNodes(ECSClient.java:282)
+	at app_kvECS.ECSClient.handleCommand(ECSClient.java:74)
+	at app_kvECS.ECSClient.run(ECSClient.java:56)
+	at app_kvECS.ECSClient.main(ECSClient.java:448)
+2019-04-06 18:25:00,843 ERROR [main] root: Could not connect to server
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at ecs.ECSNode.connectToServer(ECSNode.java:78)
+	at app_kvECS.ECSClient.setupNodes(ECSClient.java:311)
+	at app_kvECS.ECSClient.addNodes(ECSClient.java:282)
+	at app_kvECS.ECSClient.handleCommand(ECSClient.java:74)
+	at app_kvECS.ECSClient.run(ECSClient.java:56)
+	at app_kvECS.ECSClient.main(ECSClient.java:448)
+2019-04-06 18:28:08,068 WARN  [main] root: zkAddress is:127.0.0.1:4321
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.11--1, built on 02/20/2019 14:37 GMT
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:host.name=brianaly-blade
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.version=1.8.0_201
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.vendor=Oracle Corporation
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.home=/usr/lib/jvm/java-8-oracle/jre
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.class.path=m2-ecs.jar
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.library.path=/usr/local/cuda-9.0/lib64::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:os.name=Linux
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:os.arch=amd64
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:os.version=4.15.0-46-generic
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:user.name=brianaly
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:user.home=/home/brianaly
+2019-04-06 18:28:08,071 INFO  [main] org.apache.zookeeper.ZooKeeper: Client environment:user.dir=/home/brianaly/ECE419/M4
+2019-04-06 18:28:08,099 INFO  [main] org.apache.zookeeper.ZooKeeper: Initiating client connection, connectString=127.0.0.1:4321 sessionTimeout=2000 watcher=app_kvECS.ECSClient$$Lambda$1/20671747@3ecf72fd
+2019-04-06 18:28:08,104 INFO  [main-SendThread(127.0.0.1:4321)] org.apache.zookeeper.ClientCnxn: Opening socket connection to server 127.0.0.1/127.0.0.1:4321. Will not attempt to authenticate using SASL (unknown error)
+2019-04-06 18:28:08,106 INFO  [main-SendThread(127.0.0.1:4321)] org.apache.zookeeper.ClientCnxn: Socket connection established to 127.0.0.1/127.0.0.1:4321, initiating session
+2019-04-06 18:28:08,107 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:4321] org.apache.zookeeper.server.NIOServerCnxnFactory: Accepted socket connection from /127.0.0.1:33592
+2019-04-06 18:28:08,109 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:4321] org.apache.zookeeper.server.ZooKeeperServer: Client attempting to establish new session at /127.0.0.1:33592
+2019-04-06 18:28:08,109 INFO  [SyncThread:0] org.apache.zookeeper.server.persistence.FileTxnLog: Creating new log file: log.28
+2019-04-06 18:28:08,123 INFO  [SyncThread:0] org.apache.zookeeper.server.ZooKeeperServer: Established session 0x100004a42380000 with negotiated timeout 4000 for client /127.0.0.1:33592
+2019-04-06 18:28:08,123 INFO  [main-SendThread(127.0.0.1:4321)] org.apache.zookeeper.ClientCnxn: Session establishment complete on server 127.0.0.1/127.0.0.1:4321, sessionid = 0x100004a42380000, negotiated timeout = 4000
+2019-04-06 18:28:08,128 INFO  [main] root: ECS started with ZooKeeper 127.0.0.1:4321
+2019-04-06 18:28:13,402 INFO  [SessionTracker] org.apache.zookeeper.server.ZooKeeperServer: Expiring session 0x10000472c620000, timeout of 4000ms exceeded
+2019-04-06 18:28:13,403 INFO  [ProcessThread(sid:0 cport:4321):] org.apache.zookeeper.server.PrepRequestProcessor: Processed session termination for sessionid: 0x10000472c620000
+2019-04-06 18:28:16,243 ERROR [main] root: Could not connect to server
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at ecs.ECSNode.connectToServer(ECSNode.java:78)
+	at app_kvECS.ECSClient.setupNodes(ECSClient.java:311)
+	at app_kvECS.ECSClient.addNodes(ECSClient.java:282)
+	at app_kvECS.ECSClient.handleCommand(ECSClient.java:74)
+	at app_kvECS.ECSClient.run(ECSClient.java:56)
+	at app_kvECS.ECSClient.main(ECSClient.java:448)
+2019-04-06 18:28:22,245 ERROR [main] root: Could not connect to server
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at ecs.ECSNode.connectToServer(ECSNode.java:78)
+	at app_kvECS.ECSClient.setupNodes(ECSClient.java:311)
+	at app_kvECS.ECSClient.addNodes(ECSClient.java:282)
+	at app_kvECS.ECSClient.handleCommand(ECSClient.java:74)
+	at app_kvECS.ECSClient.run(ECSClient.java:56)
+	at app_kvECS.ECSClient.main(ECSClient.java:448)

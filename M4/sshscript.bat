@@ -1,0 +1,1 @@
+ssh -n herna130@ug245.eecg.utoronto.ca nohup java -jar m2-server.jar 4000 200 LRU ALL
